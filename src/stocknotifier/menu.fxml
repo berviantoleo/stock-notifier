@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="600.0" prefWidth="800.0"
+            xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="stocknotifier.MenuController">
+    <Pane fx:id="contentPane" layoutX="200.0"/>
+    <VBox fx:id="sideBar" prefHeight="600.0" prefWidth="178.0">
+        <ImageView fitHeight="127.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@back.jpg"/>
+        </ImageView>
+        <JFXButton fx:id="requestTabButton" buttonType="RAISED" onAction="#requestTabButtonPressed" prefHeight="74.0" prefWidth="213.0"
+                   ripplerFill="#fc0000" style="-fx-background-color: #f1f1f1;" text="Requests from Other Store"/>
+        <JFXButton fx:id="localStockTabButton" buttonType="FLAT" layoutX="10.0" layoutY="123.0" onAction="#localStockTabButtonPressed" prefHeight="74.0"
+                   prefWidth="213.0" ripplerFill="#fc0000" style="-fx-background-color: #f1f1f1;" text="Empty Local Stock" />
+        <JFXButton fx:id="notifyButton" buttonType="FLAT" layoutX="10.0" layoutY="200.0" onAction="#notifyEmptyStock" prefHeight="74.0"
+                   prefWidth="213.0" ripplerFill="#fc0000" style="-fx-background-color: cornflowerblue;" text="Notify" />
+    </VBox>
+</AnchorPane>
